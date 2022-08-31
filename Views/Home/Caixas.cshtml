@@ -1,0 +1,16 @@
+﻿@{
+    string[] cor = new string[3];
+    Random ram = new Random();
+    cor[0] = "MediumSeaGreen";
+    cor[1] = "ForestGreen";
+    cor[2] = "OliveDrab";
+
+    int quant = Convert.ToInt32(ViewData["quantidade"]);
+
+    for (int i = 0; i < quant; i++)
+    {
+        int num = ram.Next(0, 3);
+
+        <div class="d-xxl-inline-block" style="background-color: @(cor[num]); -moz-text-size-adjust: auto; width: 20rem; height: 20rem; margin:0.5rem"></div>
+    }
+}
