@@ -13,31 +13,14 @@ namespace aula2408.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index(int? id)
+        public IActionResult Index()
         {
-            if (id == 1)
-                Response.Redirect("../Privacy");
-            if (id == 2)
-                Response.Redirect("../Privacy");  
-            
-            if (id == 3)
-                Response.Redirect("../Caixas");   
-            if (id == 4)
-                Response.Redirect("../Caixas");   
-            if (id == 5)
-                Response.Redirect("../Caixas");  
-
-            if (id == 6)
-                Response.Redirect("../Imagem");   
-            if (id == 7)
-                Response.Redirect("../Imagem");
-
             return View();
         }
 
         public IActionResult Privacy( int? id)
         {
-            if (id == 1)
+            if (id == 1) 
                 ViewData["cor"] = "blue";
             if (id == 2)
                 ViewData["cor"] = "green";
